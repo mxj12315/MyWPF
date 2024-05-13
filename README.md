@@ -256,7 +256,7 @@ internal class Human
 
 此时即可成功运行
 
-<img src="/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240327232747671.png" alt="image-20240327232747671" style="width:500px;" />
+<img src="./README.assets/image-20240327232747671.png" alt="image-20240327232747671" style="width:500px;" />
 
 
 
@@ -465,7 +465,7 @@ sp.Children.Add(btn);
 
 项目截图
 
-<img src="/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240401230238728.png" alt="image-20240401230238728" style="width:500px;" />
+<img src="./README.assets/image-20240401230238728.png" alt="image-20240401230238728" style="width:500px;" />
 
 #### x:shared
 
@@ -516,7 +516,7 @@ public class MyButton:Button
 
 运行程序时，通过xaml配置的UserWindowType属性赋值为Window1，点击触发按钮的`OnClick`事件执行`Activator.CreateInstance(this.UserWinwowType) as Window;`创建对象，并转换为Window类型。
 
-<img src="/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240407170432499-5614294.png" alt="image-20240407170432499" style="width:500px;" />
+<img src="./README.assets/image-20240407170432499-5614294.png" alt="image-20240407170432499" style="width:500px;" />
 
 #### x:Null
 
@@ -545,7 +545,7 @@ public class MyButton:Button
 
 运行效果
 
-<img src="/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240407172200976-5614294.png" alt="image-20240407172200976" style="width:500px;" />
+<img src="./README.assets/image-20240407172200976-5614294.png" alt="image-20240407172200976" style="width:500px;" />
 
 #### x:Array
 
@@ -575,7 +575,7 @@ ListBox的Items属性是只读属性，上面的方法无法添加值。
 
 运行结果
 
-<img src="/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240407175408697-5614294.png" alt="image-20240407175408697" style="width:500px;" />
+<img src="./README.assets/image-20240407175408697-5614294.png" alt="image-20240407175408697" style="width:500px;" />
 
 #### x:Static
 
@@ -605,7 +605,7 @@ public MainWindow()
 
 运行效果
 
-<img src="/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240408144232400-5614294.png" alt="image-20240408144232400" style="width:500px;" />
+<img src="./README.assets/image-20240408144232400-5614294.png" alt="image-20240408144232400" style="width:500px;" />
 
 #### x:Code
 
@@ -760,7 +760,7 @@ WPF的UI元素的类型
 
 运行结果
 
-<img src="/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240408164423125-5614294.png" alt="image-20240408164423125" style="width:500px;" />
+<img src="./README.assets/image-20240408164423125-5614294.png" alt="image-20240408164423125" style="width:500px;" />
 
 动态数据绑定到ListBox，新建Person类，并将多个Person实例放入List集合
 
@@ -912,13 +912,13 @@ Grid的行和列
  </Grid>
 ```
 
-<img src="/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240420182521889-5614294.png" alt="image-20240420182521889" style="width:500px;" />
+<img src="./README.assets/image-20240420182521889-5614294.png" alt="image-20240420182521889" style="width:500px;" />
 
 ### StackPanel布局
 
 可以使内部元素在水平方向或垂直方向上紧凑布局，如同积木一样，抽掉前面的元素，后面的元素会整体的向前移动补齐原有的位置。
 
-<img src="/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240420172427096-5614294.png" alt="image-20240420172427096" style="zoom:50%;" />
+<img src="./README.assets/image-20240420172427096-5614294.png" alt="image-20240420172427096" style="zoom:50%;" />
 
 | 属性名              | 数据类型                | 值                                                           | 描述                               |
 | ------------------- | ----------------------- | ------------------------------------------------------------ | ---------------------------------- |
@@ -939,13 +939,13 @@ Grid的行和列
 </Canvas>
 ```
 
-<img src="/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240420175018565-5614294.png" alt="image-20240420175018565" style="width:500px;" />
+<img src="./README.assets/image-20240420175018565-5614294.png" alt="image-20240420175018565" style="width:500px;" />
 
 ### DockPanel布局
 
 DockPanel内部的元素会附加DockPanel.Dock属性，该属性类型是一个枚举有四个值Left、Right、Top、Bottom。DockPanel内的的元素会按照指定的方向累积，切分内部的剩余可用空间。内部最后一个元素会占据剩余的空间充满。
 
-<img src="/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240420180542129-5614294.png" alt="image-20240420180542129" style="zoom: 25%;" />
+<img src="./README.assets/image-20240420180542129-5614294.png" alt="image-20240420180542129" style="zoom: 25%;" />
 
 ```xaml
 <DockPanel >
@@ -959,7 +959,7 @@ DockPanel内部的元素会附加DockPanel.Dock属性，该属性类型是一个
 
 使用WrapPanel的Orientation来控制流延伸的方向，使用HorizontalAlignment和VerticalAlignment两个属性来控制内部控件的对齐方式
 
-<img src="/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240420184909976-5614294.png" alt="image-20240420184909976" style="width:500px;" />
+<img src="./README.assets/image-20240420184909976-5614294.png" alt="image-20240420184909976" style="width:500px;" />
 
 ~~~xaml
 <WrapPanel Orientation="Horizontal">
@@ -1054,11 +1054,11 @@ public partial class MainWindow : Window
 }
 ~~~
 
-<img src="/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240423224829495-5614294.png" alt="image-20240423224829495" style="width:500px;" />
+<img src="./README.assets/image-20240423224829495-5614294.png" alt="image-20240423224829495" style="width:500px;" />
 
 ### **Binding的模型**
 
-![image-20240423231235062](/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240423231235062-5614294.png)
+![image-20240423231235062](./README.assets/image-20240423231235062-5614294.png)
 
 ## Banding源与路径
 
@@ -1080,7 +1080,7 @@ Binding的源只要它是一个对象，并且通过属性公开自己的数据�
 
 运行结果
 
-<img src="/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240506234655814-5010421-5614294.png" alt="image-20240506234655814" style="width:500px;"/>
+<img src="./README.assets/image-20240506234655814-5010421-5614294.png" alt="image-20240506234655814" style="width:500px;"/>
 
 Binding类的构造器
 
@@ -1137,7 +1137,7 @@ Binding数据的流向的属性`Mode`它是BindingMode枚举类型
 
 
 
-<img src="/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240507233812413-5614294.png" alt="image-20240507233812413" style="width:500px" />
+<img src="./README.assets/image-20240507233812413-5614294.png" alt="image-20240507233812413" style="width:500px" />
 
 ### Binding的Path属性
 
@@ -1152,7 +1152,7 @@ Binding数据的流向的属性`Mode`它是BindingMode枚举类型
 
 
 
-<img src="/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240508000033538-5614294.png" alt="image-20240508000033538" style="width:500px"/>
+<img src="./README.assets/image-20240508000033538-5614294.png" alt="image-20240508000033538" style="width:500px"/>
 
 使用索引器来访问
 
@@ -1165,7 +1165,7 @@ Binding数据的流向的属性`Mode`它是BindingMode枚举类型
 
 
 
-<img src="/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240508000343990-5614294.png" alt="image-20240508000343990" style="width:500px"/>
+<img src="./README.assets/image-20240508000343990-5614294.png" alt="image-20240508000343990" style="width:500px"/>
 
 集合类或者DataView的对象可以使用`/`来访问
 
@@ -1189,7 +1189,7 @@ box2.SetBinding(TextBox.TextProperty, new Binding("/Length") { Source = list ,Mo
 box3.SetBinding(TextBox.TextProperty, new Binding("/[2]") { Source = list ,Mode = BindingMode.OneWay});
 ~~~
 
-<img src="/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240508232920247-5614294.png" alt="image-20240508232920247" style="width:500px;height:300px" />
+<img src="./README.assets/image-20240508232920247-5614294.png" alt="image-20240508232920247" style="width:500px;height:300px" />
 
 元素的属性是一个集合时，可以多级的`/`来访问
 
@@ -1215,7 +1215,7 @@ string str = "这是在c#代码中的文字";
 text2.SetBinding(TextBlock.TextProperty, new Binding(path: ".") { Source = str });
 ~~~
 
-<img src="/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240510230416635-5614294.png" alt="image-20240510230416635" style="width:500px;"/>
+<img src="./README.assets/image-20240510230416635-5614294.png" alt="image-20240510230416635" style="width:500px;"/>
 
 ### 没有source的Binding
 
@@ -1235,7 +1235,7 @@ text2.SetBinding(TextBlock.TextProperty, new Binding(path: ".") { Source = str }
  </StackPanel>
 ~~~
 
-<img src="/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240510232159536-5614294.png" alt="image-20240510232159536" style="width:500px;" />
+<img src="./README.assets/image-20240510232159536-5614294.png" alt="image-20240510232159536" style="width:500px;" />
 
 #### DataContext的借用
 
@@ -1251,7 +1251,7 @@ DataContext是一个依赖属性，当自己没有时则会把自己容器的属
 </Grid>
 ~~~
 
-<img src="/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240510233431886-5614294.png" alt="image-20240510233431886" style="width:500px" />
+<img src="./README.assets/image-20240510233431886-5614294.png" alt="image-20240510233431886" style="width:500px" />
 
 ### 使用集合对象作为列表控件的ItemSource
 
@@ -1284,7 +1284,7 @@ stId.SetBinding(TextBox.TextProperty, new Binding("SelectedItem.Id") { Source = 
 
 运行效果
 
-<img src="/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240512150540998-5614294.png" alt="image-20240512150540998" style="width:500px;height:400px" />
+<img src="./README.assets/image-20240512150540998-5614294.png" alt="image-20240512150540998" style="width:500px;height:400px" />
 
 为student类型定制的listBoxt的binding
 
@@ -1309,7 +1309,7 @@ stId.SetBinding(TextBox.TextProperty, new Binding("SelectedItem.Id") { Source = 
 
 运行效果
 
-<img src="/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240512151839397-5614294.png" alt="image-20240512151839397" style="width:500px;" />
+<img src="./README.assets/image-20240512151839397-5614294.png" alt="image-20240512151839397" style="width:500px;" />
 
 ### 使用ADO.NET对象作为Binding的源
 
@@ -1353,7 +1353,7 @@ private void Btn_Click(object sender, RoutedEventArgs e)
 
 运行效果
 
-<img src="/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240512155724754-5614294.png" alt="image-20240512155724754" style="width:500px;" />
+<img src="./README.assets/image-20240512155724754-5614294.png" alt="image-20240512155724754" style="width:500px;" />
 
 将listBox替换为ListView
 
@@ -1374,7 +1374,7 @@ private void Btn_Click(object sender, RoutedEventArgs e)
 
 运行效果
 
-<img src="/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240512163347907-5614294.png" alt="image-20240512163347907" style="width:500px;" />
+<img src="./README.assets/image-20240512163347907-5614294.png" alt="image-20240512163347907" style="width:500px;" />
 
 ### 使用Xml数据作为Binding的源
 
@@ -1437,7 +1437,7 @@ private void Btn_Click(object sender, RoutedEventArgs e)
 
 运行效果
 
-<img src="/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240512171551519-5614294.png" alt="image-20240512171551519" style="width:500px;" />
+<img src="./README.assets/image-20240512171551519-5614294.png" alt="image-20240512171551519" style="width:500px;" />
 
 ### 使用LinQ检结果作为Binding的源
 
@@ -1476,7 +1476,7 @@ private void LoadBtn_Click(object sender, RoutedEventArgs e)
 
 
 
-<img src="/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240512193449314-5614294.png" alt="image-20240512193449314" style="width:500px;" />
+<img src="./README.assets/image-20240512193449314-5614294.png" alt="image-20240512193449314" style="width:500px;" />
 
 ### 使用ObjectDataProvider作为Binding的源
 
@@ -1543,7 +1543,7 @@ private void SetBinding()
 
 
 
-<img src="/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240512202451130-5614294.png" alt="image-20240512202451130" style="width:500px;" />
+<img src="./README.assets/image-20240512202451130-5614294.png" alt="image-20240512202451130" style="width:500px;" />
 
 ### 使用Binding的RelateiveSource
 
@@ -1586,7 +1586,7 @@ public MainWindow()
 Text="{Binding Path=Name, RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type Grid}}}" 
 ~~~
 
-<img src="/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240512231237466-5614294.png" alt="image-20240512231237466" style="width:500px" />
+<img src="./README.assets/image-20240512231237466-5614294.png" alt="image-20240512231237466" style="width:500px" />
 
 ## Binding对数据校验和转换
 
@@ -1654,7 +1654,7 @@ class RangeValidationRule : ValidationRule
 
 运行效果
 
-<img src="/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240513220142046-5614294.png" alt="image-20240513220142046" style="width:500px;" />
+<img src="./README.assets/image-20240513220142046-5614294.png" alt="image-20240513220142046" style="width:500px;" />
 
 ### Binding的数据转换
 
@@ -1846,4 +1846,4 @@ Category=Fighter, Name=J-10, State=Unknown
 
 运行结果
 
-<img src="/Users/min/Documents/csharpProject/MyWPF/README.assets/image-20240513231507612-5614294.png" alt="image-20240513231507612" style="width:500px;" />
+<img src="./README.assets/image-20240513231507612-5614294.png" alt="image-20240513231507612" style="width:500px;" />
