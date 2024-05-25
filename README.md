@@ -256,7 +256,7 @@ internal class Human
 
 此时即可成功运行
 
-<img src="./README.assets/image-20240327232747671.png" alt="image-20240327232747671" style="width:500px;" />
+<img src="/Users/min/Library/Application Support/typora-user-images/image-20240327232747671.png" alt="image-20240327232747671" style="width:500px;" />
 
 
 
@@ -465,7 +465,7 @@ sp.Children.Add(btn);
 
 项目截图
 
-<img src="./README.assets/image-20240401230238728.png" alt="image-20240401230238728" style="width:500px;" />
+<img src="/Users/min/Library/Application Support/typora-user-images/image-20240401230238728.png" alt="image-20240401230238728" style="width:500px;" />
 
 #### x:shared
 
@@ -516,7 +516,7 @@ public class MyButton:Button
 
 运行程序时，通过xaml配置的UserWindowType属性赋值为Window1，点击触发按钮的`OnClick`事件执行`Activator.CreateInstance(this.UserWinwowType) as Window;`创建对象，并转换为Window类型。
 
-<img src="./README.assets/image-20240407170432499-5614294.png" alt="image-20240407170432499" style="width:500px;" />
+<img src="./README.assets/image-20240407170432499-5614294-6633396.png" alt="image-20240407170432499" style="width:500px;" />
 
 #### x:Null
 
@@ -545,7 +545,7 @@ public class MyButton:Button
 
 运行效果
 
-<img src="./README.assets/image-20240407172200976-5614294.png" alt="image-20240407172200976" style="width:500px;" />
+<img src="./README.assets/image-20240407172200976-5614294-6633396.png" alt="image-20240407172200976" style="width:500px;" />
 
 #### x:Array
 
@@ -575,7 +575,7 @@ ListBox的Items属性是只读属性，上面的方法无法添加值。
 
 运行结果
 
-<img src="./README.assets/image-20240407175408697-5614294.png" alt="image-20240407175408697" style="width:500px;" />
+<img src="./README.assets/image-20240407175408697-5614294-6633396.png" alt="image-20240407175408697" style="width:500px;" />
 
 #### x:Static
 
@@ -605,7 +605,7 @@ public MainWindow()
 
 运行效果
 
-<img src="./README.assets/image-20240408144232400-5614294.png" alt="image-20240408144232400" style="width:500px;" />
+<img src="./README.assets/image-20240408144232400-5614294-6633396.png" alt="image-20240408144232400" style="width:500px;" />
 
 #### x:Code
 
@@ -760,7 +760,7 @@ WPF的UI元素的类型
 
 运行结果
 
-<img src="./README.assets/image-20240408164423125-5614294.png" alt="image-20240408164423125" style="width:500px;" />
+<img src="./README.assets/image-20240408164423125-5614294-6633396.png" alt="image-20240408164423125" style="width:500px;" />
 
 动态数据绑定到ListBox，新建Person类，并将多个Person实例放入List集合
 
@@ -912,13 +912,13 @@ Grid的行和列
  </Grid>
 ```
 
-<img src="./README.assets/image-20240420182521889-5614294.png" alt="image-20240420182521889" style="width:500px;" />
+<img src="./README.assets/image-20240420182521889-5614294-6633396.png" alt="image-20240420182521889" style="width:500px;" />
 
 ### StackPanel布局
 
 可以使内部元素在水平方向或垂直方向上紧凑布局，如同积木一样，抽掉前面的元素，后面的元素会整体的向前移动补齐原有的位置。
 
-<img src="./README.assets/image-20240420172427096-5614294.png" alt="image-20240420172427096" style="zoom:50%;" />
+<img src="./README.assets/image-20240420172427096-5614294-6633396.png" alt="image-20240420172427096" style="zoom:50%;" />
 
 | 属性名              | 数据类型                | 值                                                           | 描述                               |
 | ------------------- | ----------------------- | ------------------------------------------------------------ | ---------------------------------- |
@@ -939,13 +939,13 @@ Grid的行和列
 </Canvas>
 ```
 
-<img src="./README.assets/image-20240420175018565-5614294.png" alt="image-20240420175018565" style="width:500px;" />
+<img src="./README.assets/image-20240420175018565-5614294-6633396.png" alt="image-20240420175018565" style="width:500px;" />
 
 ### DockPanel布局
 
 DockPanel内部的元素会附加DockPanel.Dock属性，该属性类型是一个枚举有四个值Left、Right、Top、Bottom。DockPanel内的的元素会按照指定的方向累积，切分内部的剩余可用空间。内部最后一个元素会占据剩余的空间充满。
 
-<img src="./README.assets/image-20240420180542129-5614294.png" alt="image-20240420180542129" style="zoom: 25%;" />
+<img src="./README.assets/image-20240420180542129-5614294-6633396.png" alt="image-20240420180542129" style="zoom: 25%;" />
 
 ```xaml
 <DockPanel >
@@ -959,7 +959,7 @@ DockPanel内部的元素会附加DockPanel.Dock属性，该属性类型是一个
 
 使用WrapPanel的Orientation来控制流延伸的方向，使用HorizontalAlignment和VerticalAlignment两个属性来控制内部控件的对齐方式
 
-<img src="./README.assets/image-20240420184909976-5614294.png" alt="image-20240420184909976" style="width:500px;" />
+<img src="./README.assets/image-20240420184909976-5614294-6633396.png" alt="image-20240420184909976" style="width:500px;" />
 
 ~~~xaml
 <WrapPanel Orientation="Horizontal">
@@ -1054,11 +1054,15 @@ public partial class MainWindow : Window
 }
 ~~~
 
-<img src="./README.assets/image-20240423224829495-5614294.png" alt="image-20240423224829495" style="width:500px;" />
+<img src="./README.assets/image-20240423224829495-5614294-6633396.png" alt="image-20240423224829495" style="width:500px;" />
+
+绑定代码分析
+
+<img src="./README.assets/image-20240516233315733-6633396.png" alt="image-20240516233315733"/>
 
 ### **Binding的模型**
 
-![image-20240423231235062](./README.assets/image-20240423231235062-5614294.png)
+![image-20240423231235062](./README.assets/image-20240423231235062-5614294-6633396.png)
 
 ## Banding源与路径
 
@@ -1080,7 +1084,7 @@ Binding的源只要它是一个对象，并且通过属性公开自己的数据�
 
 运行结果
 
-<img src="./README.assets/image-20240506234655814-5010421-5614294.png" alt="image-20240506234655814" style="width:500px;"/>
+<img src="./README.assets/image-20240506234655814-5010421-5614294-6633396.png" alt="image-20240506234655814" style="width:500px;"/>
 
 Binding类的构造器
 
@@ -1103,7 +1107,8 @@ public Binding(string path)
 上面的xaml代码可以简写为
 
 ~~~xaml
- <TextBox x:Name="textBox1" Text="{Binding Path=Value,ElementName=slider1}" BorderBrush="Black" />
+<!--将slider1的Value属性与TextBox的Text属性进行绑定--> 
+<TextBox x:Name="textBox1" Text="{Binding Path=Value,ElementName=slider1}" BorderBrush="Black" />
  简写后
  <TextBox x:Name="textBox1" Text="{Binding Value,ElementName=slider1}" BorderBrush="Black" />
 ~~~
@@ -1137,7 +1142,7 @@ Binding数据的流向的属性`Mode`它是BindingMode枚举类型
 
 
 
-<img src="./README.assets/image-20240507233812413-5614294.png" alt="image-20240507233812413" style="width:500px" />
+<img src="./README.assets/image-20240507233812413-5614294-6633396.png" alt="image-20240507233812413" style="width:500px" />
 
 ### Binding的Path属性
 
@@ -1152,7 +1157,7 @@ Binding数据的流向的属性`Mode`它是BindingMode枚举类型
 
 
 
-<img src="./README.assets/image-20240508000033538-5614294.png" alt="image-20240508000033538" style="width:500px"/>
+<img src="./README.assets/image-20240508000033538-5614294-6633396.png" alt="image-20240508000033538" style="width:500px"/>
 
 使用索引器来访问
 
@@ -1165,7 +1170,7 @@ Binding数据的流向的属性`Mode`它是BindingMode枚举类型
 
 
 
-<img src="./README.assets/image-20240508000343990-5614294.png" alt="image-20240508000343990" style="width:500px"/>
+<img src="./README.assets/image-20240508000343990-5614294-6633396.png" alt="image-20240508000343990" style="width:500px"/>
 
 集合类或者DataView的对象可以使用`/`来访问
 
@@ -1189,7 +1194,7 @@ box2.SetBinding(TextBox.TextProperty, new Binding("/Length") { Source = list ,Mo
 box3.SetBinding(TextBox.TextProperty, new Binding("/[2]") { Source = list ,Mode = BindingMode.OneWay});
 ~~~
 
-<img src="./README.assets/image-20240508232920247-5614294.png" alt="image-20240508232920247" style="width:500px;height:300px" />
+<img src="./README.assets/image-20240508232920247-5614294-6633396.png" alt="image-20240508232920247" style="width:500px;height:300px" />
 
 元素的属性是一个集合时，可以多级的`/`来访问
 
@@ -1215,7 +1220,7 @@ string str = "这是在c#代码中的文字";
 text2.SetBinding(TextBlock.TextProperty, new Binding(path: ".") { Source = str });
 ~~~
 
-<img src="./README.assets/image-20240510230416635-5614294.png" alt="image-20240510230416635" style="width:500px;"/>
+<img src="./README.assets/image-20240510230416635-5614294-6633396.png" alt="image-20240510230416635" style="width:500px;"/>
 
 ### 没有source的Binding
 
@@ -1235,7 +1240,7 @@ text2.SetBinding(TextBlock.TextProperty, new Binding(path: ".") { Source = str }
  </StackPanel>
 ~~~
 
-<img src="./README.assets/image-20240510232159536-5614294.png" alt="image-20240510232159536" style="width:500px;" />
+<img src="./README.assets/image-20240510232159536-5614294-6633396.png" alt="image-20240510232159536" style="width:500px;" />
 
 #### DataContext的借用
 
@@ -1251,7 +1256,7 @@ DataContext是一个依赖属性，当自己没有时则会把自己容器的属
 </Grid>
 ~~~
 
-<img src="./README.assets/image-20240510233431886-5614294.png" alt="image-20240510233431886" style="width:500px" />
+<img src="./README.assets/image-20240510233431886-5614294-6633396.png" alt="image-20240510233431886" style="width:500px" />
 
 ### 使用集合对象作为列表控件的ItemSource
 
@@ -1284,7 +1289,7 @@ stId.SetBinding(TextBox.TextProperty, new Binding("SelectedItem.Id") { Source = 
 
 运行效果
 
-<img src="./README.assets/image-20240512150540998-5614294.png" alt="image-20240512150540998" style="width:500px;height:400px" />
+<img src="./README.assets/image-20240512150540998-5614294-6633396.png" alt="image-20240512150540998" style="width:500px;height:400px" />
 
 为student类型定制的listBoxt的binding
 
@@ -1309,7 +1314,7 @@ stId.SetBinding(TextBox.TextProperty, new Binding("SelectedItem.Id") { Source = 
 
 运行效果
 
-<img src="./README.assets/image-20240512151839397-5614294.png" alt="image-20240512151839397" style="width:500px;" />
+<img src="./README.assets/image-20240512151839397-5614294-6633396.png" alt="image-20240512151839397" style="width:500px;" />
 
 ### 使用ADO.NET对象作为Binding的源
 
@@ -1353,7 +1358,7 @@ private void Btn_Click(object sender, RoutedEventArgs e)
 
 运行效果
 
-<img src="./README.assets/image-20240512155724754-5614294.png" alt="image-20240512155724754" style="width:500px;" />
+<img src="./README.assets/image-20240512155724754-5614294-6633396.png" alt="image-20240512155724754" style="width:500px;" />
 
 将listBox替换为ListView
 
@@ -1374,7 +1379,7 @@ private void Btn_Click(object sender, RoutedEventArgs e)
 
 运行效果
 
-<img src="./README.assets/image-20240512163347907-5614294.png" alt="image-20240512163347907" style="width:500px;" />
+<img src="./README.assets/image-20240512163347907-5614294-6633396.png" alt="image-20240512163347907" style="width:500px;" />
 
 ### 使用Xml数据作为Binding的源
 
@@ -1437,7 +1442,7 @@ private void Btn_Click(object sender, RoutedEventArgs e)
 
 运行效果
 
-<img src="./README.assets/image-20240512171551519-5614294.png" alt="image-20240512171551519" style="width:500px;" />
+<img src="./README.assets/image-20240512171551519-5614294-6633396.png" alt="image-20240512171551519" style="width:500px;" />
 
 ### 使用LinQ检结果作为Binding的源
 
@@ -1476,7 +1481,7 @@ private void LoadBtn_Click(object sender, RoutedEventArgs e)
 
 
 
-<img src="./README.assets/image-20240512193449314-5614294.png" alt="image-20240512193449314" style="width:500px;" />
+<img src="./README.assets/image-20240512193449314-5614294-6633396.png" alt="image-20240512193449314" style="width:500px;" />
 
 ### 使用ObjectDataProvider作为Binding的源
 
@@ -1543,7 +1548,7 @@ private void SetBinding()
 
 
 
-<img src="./README.assets/image-20240512202451130-5614294.png" alt="image-20240512202451130" style="width:500px;" />
+<img src="./README.assets/image-20240512202451130-5614294-6633396.png" alt="image-20240512202451130" style="width:500px;" />
 
 ### 使用Binding的RelateiveSource
 
@@ -1586,7 +1591,7 @@ public MainWindow()
 Text="{Binding Path=Name, RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type Grid}}}" 
 ~~~
 
-<img src="./README.assets/image-20240512231237466-5614294.png" alt="image-20240512231237466" style="width:500px" />
+<img src="./README.assets/image-20240512231237466-5614294-6633396.png" alt="image-20240512231237466" style="width:500px" />
 
 ## Binding对数据校验和转换
 
@@ -1654,7 +1659,7 @@ class RangeValidationRule : ValidationRule
 
 运行效果
 
-<img src="./README.assets/image-20240513220142046-5614294.png" alt="image-20240513220142046" style="width:500px;" />
+<img src="./README.assets/image-20240513220142046-5614294-6633396.png" alt="image-20240513220142046" style="width:500px;" />
 
 ### Binding的数据转换
 
@@ -1846,4 +1851,752 @@ Category=Fighter, Name=J-10, State=Unknown
 
 运行结果
 
-<img src="./README.assets/image-20240513231507612-5614294.png" alt="image-20240513231507612" style="width:500px;" />
+<img src="./README.assets/image-20240513231507612-5614294-6633396.png" alt="image-20240513231507612" style="width:500px;" />
+
+## 依赖属性
+
+### 依赖属性的定义
+
+依赖属性是WPF允许对象在创建时并不包含用于存储数据的空间（即字段所占的空间），只保留在需要用到的数据时能够获得默认值，借用其他对象数据的能力。可以自身没有值，并能通过使用binding从数据源获得值的属性，拥有依赖属性的对象被称为依赖对象。
+
+- 能够节省空间的开销
+- 属性值可以通过Binding依赖在其他对象上
+
+依赖属性由DependencyProperty类实现，DependencyObject有GetValue和SetValue两个方法。
+
+<img src="./README.assets/image-20240516221343723-6633396.png" alt="DependencyObject" style="width:500px;" />
+
+依赖属性均被public static readonly修饰
+
+<img src="./README.assets/image-20240516234337031-6633396.png" alt="image-20240516234337031" style="width:500px;" />
+
+继承DependencyObject类则具备GetValue和GetValue方法
+
+~~~c#
+   class Student : DependencyObject
+   {
+       public static readonly DependencyProperty NameProperty = 
+         DependencyProperty.Register("Name", typeof(string), typeof(Student));
+       
+     	 // SetValue，GetValue是父类方法
+       public string Name
+       {   get {  return (string)GetValue(NameProperty); }
+           set { SetValue(NameProperty, value); }
+       }
+
+       // SetBinding包装
+       public BindingExpressionBase SetBinding(DependencyProperty dp,BindingBase binding)
+       {
+           return BindingOperations.SetBinding(this, dp, binding);
+       }
+   }
+~~~
+
+参数说明：
+
+<img src="./README.assets/image-20240516222830184-6633396.png" alt="image-20240516222830184" style="width:500px;" />
+
+使普通的类具备setBinding的能力
+
+~~~c#
+public MainWindow()
+{
+    InitializeComponent();
+    Student student = new Student();
+    Binding binding1 = new Binding("Text") { Source = t1};
+    Binding binding2 = new Binding("Name") { Source = student };
+    // student具备SetBinding的能力，将TextBox的Text属性的值给到student对象
+    student.SetBinding(Student.NameProperty, binding1);
+    t2.SetBinding(TextBox.TextProperty,binding2 );
+}
+
+private void Btn_Click(object sender, RoutedEventArgs e)
+{
+    Student stu = new Student();
+    stu.Name = this.t1.Text;
+    this.t2.Text = stu.Name;
+}
+~~~
+
+<img src="./README.assets/image-20240516230951553-6633396.png" alt="image-20240516230951553" style="width:500px;" />
+
+### 依赖属性存取值的本质
+
+依赖属性（DependencyProperty）实例会被注册到全局的HashTable中，没"对CLR属性名-宿主类型"所决定的`DependencyProperty`实例是唯一的。再使用同一个CLR属性名和同一个宿主名类型进行注册，那么程序会抛出异常。
+
+1. 系统会创建一个`DependencyProperty`的实例，并运用它的CLR属性名和宿主类名生成`HashCode`，最后把`HashCode`和这个实例作为`key-value`键值对存入全局的、名字为`PropertyName`的`HashTable`中。
+1. WPF属性系统会通过CLR属性名和宿主类型名从这个`HashTable`中检索出`DependencyProperty`实例
+
+### WPF依赖属性读取的优先级
+
+1. WPF属性系统强制值。
+2. 由动画过程控制的值。
+3. 本地变量值（存储在 EffectiveValueEntry 数组中）。
+4. 由上级元素的Template 设置的值。
+5.  由隐式样式（Implicit Style）设置的值。
+6.  由样式之触发器（Style Trigger）设置的值。
+7. 由模板之触发器（Template Trigger）设置的值。
+8. 由样式之设置器：（Style Setter）设置的值。
+9. 由默认样式（Default Style）设置的值，默认模式其实就是由主题（Theme）指定的模式。
+10. 由上级元素继承而来的值。
+11. 默认值，来源于依赖属性的元数据（metadata）。
+
+## 附加属性
+
+附加属性（Attached Property）是一个属性原本不属于对象的，应为某种原因后来被附加上的属性。其作用是让属性和数据类型解耦。
+
+### 附加属性的声明
+
+使用`DependencyProperty.RegisterAttached`方法来注册附加属性
+
+附加属性的变量名之前也使用`public static readonly`修饰符修饰
+
+```c#
+ class Student : DependencyObject
+ {
+     public static readonly DependencyProperty AgeProperty = 
+       DependencyProperty.RegisterAttached("Age", typeof(string), typeof(Student));
+ }
+```
+
+## 事件
+
+### 直接事件的3个关键点
+
+1. **事件的拥有者**：即消息的发送者。事件的宿主可以在某些条件下激发它拥有的事件，即事件被触发。事件被触发则消息被发送。
+2. **事件的响应者**：即消息的接收者、处理者。事件接收者使用其事件处理器（Event Handler）对事件做出响应。
+3. ﻿﻿**事件的订阅关系**：事件的拥有者可以随时激发事件，但事件发生后会不会得到响应要看有没有事件的响应者，或者说要看这个事件是否被关注。如果对象 A关注对象B 的某个事件是否发生，则称A订阅了B 的事件。更进一步讲，事件实际上是一个使用 event 关键字修饰的委托（Delegate）类型成员变量，事件处理器则是一个函数，说A订阅了B的事件，本质上就是让 B.Event 与 A.EventHandler 关联起来。所谓事件激发就是 B.Event被调用，这时，与其关联的 A.EventHandler 就会被调用。
+
+事件的注册代码
+
+~~~C#
+this.myButton.Click += new System.Windows.RoutedEventHandler(this.Btn_Click);
+~~~
+
+### 直接事件的模型
+
+![image-20240518234320110](./README.assets/image-20240518234320110-6633396.png)
+
+### 传统事件的弊端
+
+- 每一对事件都是“发生——响应”的关系，必须建立显示的点对点的关系
+- 事件的宿主必须能直接的访问事件的响应者，不然无法建立订阅关系
+
+### 路由事件
+
+为了解决传统事件的代码耦合而产生路由事件。
+
+在路由事件内部可以查看路由事件的也是发出者的起点是哪个控件，事件的传递过程，并且可以决定事件是传递到此为止还是继续传递。
+
+路由事件也成为附加事件，可以让非用户界面上的元素实现与其他元素之间沟通
+
+<img src="./README.assets/image-20240519002802908-6633396.png" alt="image-20240519002802908" style="zoom:60%;" />
+
+- 点击`ButtonLeft`按钮路由事件传递方式为`ButtonLeft`->`GridLeft`->`GridRoot`->`StackPanel`->`Window`
+
+- 点击`ButtonRight`按路由钮事件传递方式为`ButtonRight`->`GridRight`->`GridRoot`->`StackPanel`->`Window`
+
+~~~xaml
+<StackPanel >
+    <Grid x:Name="GridRoot" Height="200">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="GridLeft"/>
+            <ColumnDefinition x:Name="GridRight"/>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Column="0" x:Name="LeftButton" Content="Ledt" Background="Lavender"/>
+        <Button Grid.Column="1" x:Name="RightButton" Content="Right" Background="NavajoWhite"/>
+    </Grid>
+</StackPanel>
+~~~
+
+~~~c#
+public partial class MainWindow : Window
+{
+    public MainWindow()
+    {
+        InitializeComponent();
+      	// GridRoot控件添加路由事件监听
+        this.GridRoot.AddHandler(Button.ClickEvent, new RoutedEventHandler(this.BtnClick));
+    }
+
+    public void BtnClick(Object sender, RoutedEventArgs e )
+    {
+        MessageBox.Show((e.OriginalSource as FrameworkElement).Name.ToString());
+    }
+}
+~~~
+
+如果在Xaml中为GridRoot添加路由事件，则代码如下
+
+~~~xaml
+<StackPanel >
+  	<!-- 添加路由事件监听-->
+    <!--Grid x:Name="GridRoot" Height="200" Button.Click="BtnClick"-->
+  	<!-- 或者使用ButtonBase.Click,应为Button继承自ButtonBase-->
+    <Grid x:Name="GridRoot" Height="200" ButtonBase.Click="BtnClick">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="GridLeft"/>
+            <ColumnDefinition x:Name="GridRight"/>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Column="0" x:Name="LeftButton" Content="Ledt" Background="Lavender"/>
+        <Button Grid.Column="1" x:Name="RightButton" Content="Right" Background="NavajoWhite"/>
+    </Grid>
+</StackPanel>
+~~~
+
+### 自定义路由事件
+
+自定义路由事件的三个步骤：
+
+- 声明并注册路由事件
+- 为路由事件添加CLR事件包装
+- 创建可以激发路由事件的方法
+
+~~~c#
+private void Handler_ConditionalClick(object sender, RoutedEventArgs e)
+{
+    string senderName = ((FrameworkElement)sender).Name;
+    string sourceName = ((FrameworkElement)e.Source).Name;
+    // 首次运行时，sender 为 CustomButton，第二次运行时则为 StackPanel1
+    string messageBoxText = $"路由事件从 {sourceName}到达 {senderName}";
+    this.MyLisBox.Items.Add(DateTime.Now.ToString()+":"+messageBoxText);
+   // MessageBox.Show(messageBoxText);
+  
+  	//if(senderName == "StackPanel1") e.Handled = true;// 终止冒泡
+}
+~~~
+
+~~~c#
+public class CustomButton : Button
+{
+    // 声明并且注册路由事件，事件名为ConditionalClick，策略为Bubble(冒泡)
+    public static readonly RoutedEvent ConditionalClickEvent = EventManager.RegisterRoutedEvent(
+        name: "ConditionalClick",
+        routingStrategy: RoutingStrategy.Bubble,
+        handlerType: typeof(RoutedEventHandler),
+        ownerType: typeof(CustomButton));
+
+    // 定义个一个类型为RoutedEventHandler事件，并为事件实现+=(add)和-+(remove)方法
+    public event RoutedEventHandler ConditionalClick
+    {
+        add { 
+          AddHandler(ConditionalClickEvent, value); 
+        }
+        remove { 
+          RemoveHandler(ConditionalClickEvent, value); 
+        }
+    }
+
+    void RaiseCustomRoutedEvent()
+    {
+        // 创建一个RoutedEventArgs实例.
+        RoutedEventArgs routedEventArgs = new RoutedEventArgs(routedEvent: ConditionalClickEvent);
+
+        // 激发事件
+        RaiseEvent(routedEventArgs);
+    }
+
+
+    protected override void OnClick()
+    {
+        if (DateTime.Now > new DateTime()) RaiseCustomRoutedEvent();
+
+        // 保留原本的OnClick方法的触发
+        base.OnClick();
+    }
+}
+~~~
+
+~~~xaml
+<StackPanel Name="StackPanel1" local:CustomButton.ConditionalClick="Handler_ConditionalClick">
+    <ListBox x:Name="MyLisBox" Margin="5"/>
+    <local:CustomButton
+        x:Name="customButton"
+        ConditionalClick="Handler_ConditionalClick"
+        Content="点击触发事件"
+        Background="LightGray">
+    </local:CustomButton>
+</StackPanel>
+~~~
+
+<img src="./README.assets/image-20240520220459779-6633396.png" alt="image-20240520220459779" style="width:500px;" />
+
+添加`if(senderName == "StackPanel1") e.Handled = true;`终止冒泡
+
+<img src="./README.assets/image-20240520220706479-6633396.png" alt="image-20240520220706479" style="width:500px;" />
+
+> [!NOTE]
+>
+> `RoutedEventArgs.Source`是LogicalTree（逻辑树）的消息源头
+>
+> `RoutedEventArgs.OriginalSource`是VisualTree（视觉树）的消息源头
+
+### 附加事件
+
+附加事件的“附加”。确切地说，UIElement 类是路由事件宿主与附加事件宿主的分水岭，不单是因为从 UIElement 类开始才具备了在界面上显示的能力，还因为RaiseEvent、AddHandler 和 RemoveHandler 这些方法也定义在 UIElement 类中。因此，如果在一个非 UIElement 派生类中注册了路由事件，则这个类的实例既不能自己激发（Raise）此路由事件也无法自己侦听此路由事件，只能把这个事件的激发“附着”在某个具有 RaiseEvent 方法的对象上，借助这个对象的 RaiseEvent 方法把事件发送出去；事件的侦听任务也只能交给别的对象去做。总之，附加事件只能算是路由事件的一种用法
+
+~~~xaml
+<Grid x:Name="gridMain">
+    <Button x:Name="Btn" Content="Button" Click="Button_Click" Margin="20"/>
+</Grid>
+~~~
+
+~~~C#
+  public class Student
+  {
+      public String Name { get; set; }
+      public int Age { get; set; }
+      // 声明并定义附加事件
+      public static readonly RoutedEvent NameChangedEvent = EventManager.RegisterRoutedEvent(
+          name: "NameChanged",
+          routingStrategy: RoutingStrategy.Bubble,
+          handlerType:typeof(RoutedEventHandler),
+          ownerType:typeof(Student)
+          );
+
+      //添加路由事件
+      public static void AddNameChangedHandler( DependencyObject de, RoutedEventHandler handler )
+      {
+          UIElement e = de as UIElement;
+          if ( e != null )
+          {
+              e.AddHandler(Student.NameChangedEvent, handler );
+          }
+      }
+
+      // 移除路由事件
+      public static void RemoveNameChangedHandler(DependencyObject de, RoutedEventHandler handler)
+      {
+          UIElement e = de as UIElement;
+          if (e != null)
+          {
+              e.RemoveHandler(Student.NameChangedEvent, handler);
+          }
+      }
+  }
+~~~
+
+~~~C#
+public partial class MainWindow : Window
+{
+  public MainWindow()
+  {
+      InitializeComponent();
+      Student.AddNameChangedHandler(
+          this.gridMain, 
+          handler: new RoutedEventHandler(this.StudentNameChangedHandler));
+  }
+
+  // 按钮的点击事件，将student对象的附加事件附着到一个UIElement元素上，从而激发事件
+  private void Button_Click(object sender, RoutedEventArgs e)
+  {
+      Student student = new Student() { Age = 19 , Name = "whg"};
+      // 修改Name的值
+      student.Name = "abcd";
+      // 准备事件消息
+      RoutedEventArgs args = new RoutedEventArgs(Student.NameChangedEvent,student);
+      // 激发事件
+      this.Btn.RaiseEvent(args);
+  }
+
+
+  // gridMain捕捉到StudentNameChanged事件执行
+  public void StudentNameChangedHandler(object sender, RoutedEventArgs e)
+  {
+      MessageBox.Show((e.OriginalSource as Student).Age.ToString());
+  }
+~~~
+
+## 命令
+
+命令与事件相比具有约束力，可以约束代码的执行逻辑。
+
+### 命令系统的基本元素
+
+<img src="./README.assets/命令基本元素-6633396.png" alt="命令基本元素" style="width:500px;" />
+
+- 命令Command：通过实现了Icommand接口的类，使用较多的是RouteCommand类。
+- 命令源CommandSource:命令的发送者，实现类ICommandSource的类。很多的界面元素都实现了这个类，例如Button。
+- 命令的目标CommandTarget:命令发生给谁，命令的目标对象必须实现了IInputElement接口
+- 命令关联CommandBinding:将外围的逻辑和命令关联起来，比如执行命令之前先做校验
+
+### 命令的使用步骤
+
+1. 创建命令：如果命令具体的业务逻辑无关则之间使用RouteCommand类即可，如果命令与业务逻辑有关则创建RouteCommand的派生类或者实现Icommand接口。
+2. 声明命令实例：一般情况下某种操作只需要一个命令，因此命令一般使用单例模式创建
+3. 指定命令源：即命令是由谁发出的。一旦把命令指派给命令源，那么命令源就会受命令的影响，当命令不能被执行时作为命令源的控件将处于不可用的状态。各种控件发生命令的方式不相同，Button按控件时通过单击的时候发送命令，ListBoxItem单击时是选中，双击时才是发送命令
+4. 指定命令的目标：命令目标并不是命令的属性，而是命令源的属性。命令目标是指定向哪一个组件发起命令，无论这个组件是否有焦点都会收到命令。如果没设置命令的目标，那么WPF会认为当前有焦点的控件就是命令的目标。
+5. 设置命令的关联：命令需要CommandBinding在执行时候来判断是不是可执行，在执行之后做一些其他处理。
+
+<img src="./README.assets/image-20240522222253211-6633396.png" alt="image-20240522222253211" style="width:500px;" />
+
+清空文本案例
+
+```c#
+  public partial class MainWindow : Window
+  {
+      public MainWindow()
+      {
+          InitializeComponent();
+          InitializeCommand();
+      }
+
+      // 1.创建命令
+      private RoutedCommand clearCmd = new RoutedCommand(name: "Clear",typeof(MainWindow));
+
+      // 命令的初始化
+      private void InitializeCommand()
+      {
+          //2.指定命令源
+          this.myBtn.Command = clearCmd;
+          // 添加快捷键alt+c
+          this.clearCmd.InputGestures.Add(new KeyGesture(Key.C, ModifierKeys.Alt));
+
+          //3.指定命令的目标
+          this.myBtn.CommandTarget = this.myTextBox;
+
+          //4.设置命令的关联
+          CommandBinding cb = new CommandBinding();
+          cb.Command = this.clearCmd;
+          cb.CanExecute += new CanExecuteRoutedEventHandler(this.cb_CanExcute);
+          cb.Executed += new ExecutedRoutedEventHandler(this.cb_Excuted);
+
+          //将命令安置到外围控件上
+          this.myStackpanel.CommandBindings.Add(cb);
+      }
+
+      // 命令达到目标后会执行cb_Excuted
+      private void cb_Excuted(object sender, ExecutedRoutedEventArgs e)
+      {
+          // 清空myTextBox的文本内容
+          this.myTextBox.Clear();
+          // 避免路由事件向上冒泡
+          e.Handled = true;
+      }
+
+      // 检查命令是否可以执行时，会调用cb_CanExcute
+      private void cb_CanExcute(object sender, CanExecuteRoutedEventArgs e)
+      {
+          // myTextBox中的文本不为空时执行命令
+          if (string.IsNullOrEmpty(this.myTextBox.Text))
+          {
+              e.CanExecute = false;
+          }else
+          {
+              e.CanExecute = true;
+          }
+          // 避免路由事件向上冒泡
+          e.Handled = true;
+      }
+  }
+```
+
+```xaml
+<StackPanel x:Name="myStackpanel">
+    <Button x:Name="myBtn" Content="发送命令" Height="30px" Margin="5,5,10,10"/>
+    <TextBox x:Name="myTextBox" Margin="5,5,0,10"  Height="200px"/>
+</StackPanel>
+```
+
+<img src="./README.assets/image-20240522230016160-6633396.png" alt="image-20240522230016160" style="width:500px" />
+
+### WPF的命令库
+
+系统自带的命令库有：
+
+- ApplicationCommands
+- ComponentCommands
+- NavigationCommands
+- MediaCommands
+- EditingCommands
+
+它们都是静态类，以单例模式暴漏出来
+
+```c#
+  public static class ApplicationCommands
+  {
+      private enum CommandId : byte
+      {
+          Cut,
+          Copy,
+          Paste,
+          Undo,
+          Redo,
+          Delete,
+          Find,
+          Replace,
+          Help,
+          SelectAll,
+          New,
+          Open,
+          Save,
+          SaveAs,
+          Print,
+          CancelPrint,
+          PrintPreview,
+          Close,
+          Properties,
+          ContextMenu,
+          CorrectionList,
+          Stop,
+          NotACommand,
+          Last
+      }
+}
+```
+
+#### 命令参数
+
+WPF预置的命令库中有静态属性，实例只有一个，通过使用CommandPrameter属性携带命令的信息。
+
+```xaml
+  <Grid>
+      <Grid.RowDefinitions>
+          <RowDefinition Height="30"/>
+          <RowDefinition Height="30"/>
+          <RowDefinition Height="30"/>
+          <RowDefinition Height="*"/>
+      </Grid.RowDefinitions>
+      <Label Content="Name:" />
+      <TextBox x:Name="mytextbox"
+               VerticalContentAlignment="Center"
+               Margin="55,2,5,2"/>
+      <!--有命令，同时带有参数-->
+      <Button x:Name="Btnteacher" 
+              Content="老师" 
+              Grid.Row="1" 
+              Command="New"
+              CommandParameter="Teacher"
+              Margin="5,0,5,0"/>
+      
+      <Button x:Name="Btnstudent" 
+              Content="学生" 
+              Grid.Row="2" 
+              Command="New"
+              CommandParameter="Student"
+              Margin="5,0,5,0"/>
+      
+      <ListBox x:Name="myListBox" 
+               Grid.Row="3" 
+               BorderBrush="Wheat"
+               Margin="5,0,5,5" />
+      
+  </Grid>
+  <!--添加CommandBinding-->
+  <Window.CommandBindings >
+      <CommandBinding Command="New" 
+                      CanExecute="New_CanExcute"
+                      Executed="New_Excute"
+                      />
+  </Window.CommandBindings>
+```
+
+```c#
+public partial class MainWindow : Window
+{
+   public MainWindow()
+   {
+       InitializeComponent();
+   }
+
+   // 是否能够执行命令
+   private void New_CanExcute(object sender, CanExecuteRoutedEventArgs e)
+   {
+       if (string.IsNullOrEmpty(this.mytextbox.Text))
+       {
+           e.CanExecute = true;
+       }
+       else
+       {
+           e.CanExecute = true;
+       }
+       // 阻止路由事件冒泡
+       e.Handled = true;
+   }
+
+   // 执行命令的操作
+   private void New_Excute(object sender, ExecutedRoutedEventArgs e)
+   {
+       string name = this.mytextbox.Text;
+       // 通过e.Parameter获取到CommandParameter参数值
+       if (e.Parameter.ToString() == "Teacher") 
+       { 
+           this.myListBox.Items.Add(newItem: $"{name} Teacher: 学而时习之，不亦说乎！");
+       }
+       else if (e.Parameter.ToString() == "Student")
+       {
+           this.myListBox.Items.Add(newItem: $"{name} Student: I Want Sleep！");
+       }
+       // 阻止路由事件冒泡
+       e.Handled = true;
+   }
+}
+```
+
+<img src="./README.assets/image-20240523220852391-6633396.png" alt="image-20240523220852391" style="width:500px" />
+
+### 自定义命令
+
+- 定义接口
+- 实现ICommand接口
+- 自定义命令源
+- 创建实现自定义接口的类
+
+```c#
+  // 自定义接口
+  public interface Iview
+  {
+      // 定义属性
+      bool IsChanged { get; set; }
+      // 定义方法
+      void SetBinding();
+      void ReFresh();
+      void Save();
+      void Clear();
+  }
+```
+
+```c#
+// 实现ICommand接口
+public class ClearCommand : ICommand
+{
+    // 当命令可执行状态发生改变时会被激发
+    public event EventHandler CanExecuteChanged;
+
+    public bool CanExecute(object parameter)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Execute(object parameter)
+    {
+        Iview iview = parameter as Iview;
+        if (iview != null)
+        {
+            iview.Clear();
+        }
+    }
+}
+```
+
+```c#
+// 自定义命令源
+public class MyCommandSource : UserControl, ICommandSource
+{
+    public ICommand Command { get; set; }
+
+    public object CommandParameter { get; set; }
+
+    public IInputElement CommandTarget { get; set; }
+
+    // 重新鼠标单击事件
+    protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
+    {
+        base.OnMouseLeftButtonDown(e);
+        // 将命令作用于命令目标
+        if (this.CommandTarget!=null)
+        {
+            this.Command.Execute(this.CommandTarget);
+        }
+    }
+}
+```
+
+```c#
+// 创建实现自定义接口的类 -- c#代码部分
+public partial class MiniView : UserControl,Iview 
+  {
+      public MiniView()
+      {
+          InitializeComponent();
+      }
+
+      public bool IsChanged { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+      public void Clear()
+      {
+          this.text1.Clear();
+          this.text2.Clear();
+          this.text3.Clear();
+          this.text4.Clear();
+      }
+
+      public void ReFresh()
+      {
+          throw new NotImplementedException();
+      }
+
+      public void Save()
+      {
+          throw new NotImplementedException();
+      }
+
+      public void SetBinding()
+      {
+          throw new NotImplementedException();
+      }
+  }
+```
+
+```xaml
+<!--实现了自定义接口的类的xaml视图代码-->
+<UserControl x:Class="CustomCommand.MiniView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CustomCommand"
+             mc:Ignorable="d" 
+             d:DesignHeight="114" d:DesignWidth="200">
+    <Border  x:Name="mybord" 
+             Background="AliceBlue" 
+             BorderThickness="2">
+        <StackPanel>
+            <TextBox x:Name="text1" Margin="5"/>
+            <TextBox x:Name="text3" Margin="5,0"/>
+            <TextBox x:Name="text4" Margin="5"/>
+            <TextBox x:Name="text2" Margin="5,0"/>
+        </StackPanel>
+    </Border>
+
+</UserControl>
+```
+
+```xaml
+<!--主窗口中的代码-->
+<MainWindow>
+ <StackPanel>
+      <!--命令源-->
+      <local:MyCommandSource x:Name="ctrlClear" Margin="10" >
+          <TextBlock Text="Clear" 
+                     TextAlignment="Center"
+                     Background="Aqua"
+                     FontSize="20"
+                     Width="80"/>
+      </local:MyCommandSource>
+      <!--MiniView实现了IView-->
+      <local:MiniView x:Name="myMiniView" />
+  </StackPanel>
+</MainWindow>
+```
+
+```c#
+public partial class MainWindow : Window
+{
+    public MainWindow()
+    {
+        InitializeComponent();
+        // 声明命令并使命令源于目标进行关联
+        ClearCommand clearCommand = new ClearCommand();
+        // ctrlClear控件上面添加命令
+        this.ctrlClear.Command = clearCommand;
+        // 设置命令目标为myMiniView
+        this.ctrlClear.CommandTarget = this.myMiniView;
+    }
+}
+```
+
+当单击Clear按钮则会清除下面TextBox中的文字内容
+
+<img src="./README.assets/image-20240523234933641-6633396.png" alt="image-20240523234933641" style="width:500px" />
+
