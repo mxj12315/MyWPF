@@ -794,7 +794,7 @@ MyListBox.ItemsSource = persons; // 绑定的数据对象
 - 除了具有ItemsControl类的特性之外，还具有标题
 - 内容属性为Items、ItemsSource和Header
 
-## Decorator族
+### Decorator族
 
 - 用于UI元素的装饰作用
 - 内容属性为Child
@@ -805,7 +805,7 @@ MyListBox.ItemsSource = persons; // 绑定的数据对象
 - TextBox中的内容可以被用户编辑。
 - TextBlock是静态文本，可以运用格式操作对文字排版。
 
-## Shape族
+### Shape族
 
 - 用来装饰UI的元素，它不是控件。
 - 该类元素没有自己的内容
@@ -975,6 +975,10 @@ DockPanel内部的元素会附加DockPanel.Dock属性，该属性类型是一个
 
 ## 数据Binding
 
+### **Binding的模型**
+
+![image-20240423231235062](./README.assets/image-20240423231235062-5614294-6633396.png)
+
 ### Binding的基础概念
 
 Windows GUI运行的机制是使用消息来驱使程序运行，消息主要来源于用户的操作比如点击按钮按下等，消息会被Windows翻译并送达目标程序然后被程序处理。
@@ -1060,11 +1064,9 @@ public partial class MainWindow : Window
 
 <img src="./README.assets/image-20240516233315733-6633396.png" alt="image-20240516233315733"/>
 
-### **Binding的模型**
 
-![image-20240423231235062](./README.assets/image-20240423231235062-5614294-6633396.png)
 
-## Banding源与路径
+### Banding源与路径
 
 Binding的源只要它是一个对象，并且通过属性公开自己的数据，它就能作为Binding的源。
 
@@ -1593,7 +1595,7 @@ Text="{Binding Path=Name, RelativeSource={RelativeSource Mode=FindAncestor,Ances
 
 <img src="./README.assets/image-20240512231237466-5614294-6633396.png" alt="image-20240512231237466" style="width:500px" />
 
-## Binding对数据校验和转换
+### Binding对数据校验和转换
 
 Binding是目标Target与Source之间的桥梁，Binding进行数据的**校验**是`ValidationRules`属性，对数据的**转换**是`Converter`属性
 
@@ -1853,9 +1855,11 @@ Category=Fighter, Name=J-10, State=Unknown
 
 <img src="./README.assets/image-20240513231507612-5614294-6633396.png" alt="image-20240513231507612" style="width:500px;" />
 
-## 依赖属性
+## 属性
 
-### 依赖属性的定义
+### 依赖属性
+
+#### 依赖属性的定义
 
 依赖属性是WPF允许对象在创建时并不包含用于存储数据的空间（即字段所占的空间），只保留在需要用到的数据时能够获得默认值，借用其他对象数据的能力。可以自身没有值，并能通过使用binding从数据源获得值的属性，拥有依赖属性的对象被称为依赖对象。
 
@@ -1920,14 +1924,14 @@ private void Btn_Click(object sender, RoutedEventArgs e)
 
 <img src="./README.assets/image-20240516230951553-6633396.png" alt="image-20240516230951553" style="width:500px;" />
 
-### 依赖属性存取值的本质
+#### 依赖属性存取值的本质
 
 依赖属性（DependencyProperty）实例会被注册到全局的HashTable中，没"对CLR属性名-宿主类型"所决定的`DependencyProperty`实例是唯一的。再使用同一个CLR属性名和同一个宿主名类型进行注册，那么程序会抛出异常。
 
 1. 系统会创建一个`DependencyProperty`的实例，并运用它的CLR属性名和宿主类名生成`HashCode`，最后把`HashCode`和这个实例作为`key-value`键值对存入全局的、名字为`PropertyName`的`HashTable`中。
 1. WPF属性系统会通过CLR属性名和宿主类型名从这个`HashTable`中检索出`DependencyProperty`实例
 
-### WPF依赖属性读取的优先级
+#### WPF依赖属性读取的优先级
 
 1. WPF属性系统强制值。
 2. 由动画过程控制的值。
@@ -1941,11 +1945,11 @@ private void Btn_Click(object sender, RoutedEventArgs e)
 10. 由上级元素继承而来的值。
 11. 默认值，来源于依赖属性的元数据（metadata）。
 
-## 附加属性
+### 附加属性
 
 附加属性（Attached Property）是一个属性原本不属于对象的，应为某种原因后来被附加上的属性。其作用是让属性和数据类型解耦。
 
-### 附加属性的声明
+#### 附加属性的声明
 
 使用`DependencyProperty.RegisterAttached`方法来注册附加属性
 
@@ -2224,7 +2228,7 @@ public partial class MainWindow : Window
 
 1. 创建命令：如果命令具体的业务逻辑无关则之间使用RouteCommand类即可，如果命令与业务逻辑有关则创建RouteCommand的派生类或者实现Icommand接口。
 2. 声明命令实例：一般情况下某种操作只需要一个命令，因此命令一般使用单例模式创建
-3. 指定命令源：即命令是由谁发出的。一旦把命令指派给命令源，那么命令源就会受命令的影响，当命令不能被执行时作为命令源的控件将处于不可用的状态。各种控件发生命令的方式不相同，Button按控件时通过单击的时候发送命令，ListBoxItem单击时是选中，双击时才是发送命令
+3. 指定命令源：即命令是**由谁发出的**。一旦把命令指派给命令源，那么命令源就会受命令的影响，当命令不能被执行时作为命令源的控件将处于不可用的状态。各种控件发生命令的方式不相同，Button按控件时通过单击的时候发送命令，ListBoxItem单击时是选中，双击时才是发送命令
 4. 指定命令的目标：命令目标并不是命令的属性，而是命令源的属性。命令目标是指定向哪一个组件发起命令，无论这个组件是否有焦点都会收到命令。如果没设置命令的目标，那么WPF会认为当前有焦点的控件就是命令的目标。
 5. 设置命令的关联：命令需要CommandBinding在执行时候来判断是不是可执行，在执行之后做一些其他处理。
 
@@ -2299,6 +2303,18 @@ public partial class MainWindow : Window
 ```
 
 <img src="./README.assets/image-20240522230016160-6633396.png" alt="image-20240522230016160" style="width:500px" />
+
+> [!IMPORTANT]
+>
+> 使用命令可以避免在写其他的代码来控制Button按钮是否可用或者添加快捷键
+>
+> RoutedCommand是一个与业务逻辑无关的类，只负责跑腿，并不对命令目标做任何操作
+>
+> CanExcute的执行频率较高，在执行完毕将e.Handled 设为 true
+>
+> CommandBinding一定要设置在外围的控件上，不然无法捕捉到CanExcute和Excuted路由事件
+
+
 
 ### WPF的命令库
 
@@ -2435,15 +2451,25 @@ public partial class MainWindow : Window
 
 <img src="./README.assets/image-20240523220852391-6633396.png" alt="image-20240523220852391" style="width:500px" />
 
+命令与绑定结合
+
+命令与绑定相结合，可以实现动态命令，例如一个按钮的binding的命令可以切换。
+
+`````XAML
+<Button x:Name="btn" Content = "按钮" Command = "{Binding Path = p ,Source = s}"/>
+`````
+
+
+
 ### 自定义命令
 
-- 定义接口
-- 实现ICommand接口
-- 自定义命令源
-- 创建实现自定义接口的类
+- 定义接口——用来约束命令目标它应该有哪些行为
+- 实现ICommand接口——自定义命令：CanExcute和Excuted方法
+- 自定义命令源——由谁发命令
+- 创建实现自定义接口的类——命令作用于的对象
 
 ```c#
-  // 自定义接口
+  // 自定义接口，类似于自己写了一个Window类，定义了自己save、clear命令
   public interface Iview
   {
       // 定义属性
@@ -2457,7 +2483,7 @@ public partial class MainWindow : Window
 ```
 
 ```c#
-// 实现ICommand接口
+// 实现ICommand接口,相当于定义自己的命令
 public class ClearCommand : ICommand
 {
     // 当命令可执行状态发生改变时会被激发
@@ -2480,7 +2506,7 @@ public class ClearCommand : ICommand
 ```
 
 ```c#
-// 自定义命令源
+// 自定义命令源--谁发命令
 public class MyCommandSource : UserControl, ICommandSource
 {
     public ICommand Command { get; set; }
@@ -2503,7 +2529,7 @@ public class MyCommandSource : UserControl, ICommandSource
 ```
 
 ```c#
-// 创建实现自定义接口的类 -- c#代码部分
+// 创建实现自定义接口的类（作为自定义命令的目标--作用在哪个对象？） -- c#代码部分
 public partial class MiniView : UserControl,Iview 
   {
       public MiniView()
@@ -2599,4 +2625,12 @@ public partial class MainWindow : Window
 当单击Clear按钮则会清除下面TextBox中的文字内容
 
 <img src="./README.assets/image-20240523234933641-6633396.png" alt="image-20240523234933641" style="width:500px" />
+
+> [!IMPORTANT]
+>
+> 使用命令可以自己在写代码判断Button什么时候可用的路逻辑
+>
+> RoutedCommand是一个
+
+
 
