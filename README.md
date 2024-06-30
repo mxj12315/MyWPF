@@ -163,7 +163,22 @@ Attribute属于语言层面，为了“区分“每个元素的不同。
 
 Property属于对象层面，在类中表示事物状态的成员。
 
-Attribute和Property并不是完全对应，一个元素所包含的Attribute多于它所代表的Property
+Attribute和Property并不是完全对应，一个元素所包含的Attribute多于它所代表的Property，比如下面的代码：
+
+- `Title="MainWindow" Height="450" Width="800"`中的Title、Height和Width都是Window控件的Property属性
+- `x:Class`和`xmlns:x`属于Xml的Attribute
+
+`````xaml
+<Window x:Class="MFirstWpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MFirstWpfApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+</Windows>
+`````
 
 **使用Attribute为对象属性赋值**
 
@@ -524,6 +539,7 @@ public class MyButton:Button
 
 ```xaml
 <Window.Resources>
+  	<!--x:Key="{x:Type Button}"会隐式的被创建-->
     <Style x:Key="{x:Type Button}" TargetType="{x:Type Button}" >
         <Setter Property="Width" Value="50"/>
         <Setter Property="Height" Value="30"/>
@@ -541,7 +557,7 @@ public class MyButton:Button
 
 > [!NOTE]
 >
-> 使用`{x:Type Button}`作为`x:Key`的值是为了创建隐式样式，该样式会自动应用于所有`Button`类型的元素。而使用字符串作为`x:Key`的值则是为了创建显式样式，需要显式引用才能应用。
+> 使用`TargetType = {x:Type Button}`而不指定`x:Key`的值时系统会将` x:Key` 隐式设置为 `{x:Type Button}`，该样式会自动应用于所有`Button`类型的元素。而使用字符串作为`x:Key`的值除了`x:key={x:Type Button}`之外的则是为了创建显式样式，需要显式引用才能应用。
 
 运行效果
 
@@ -704,8 +720,6 @@ WPF的UI元素的类型
     </StackPanel.Children>
 </StackPanel>
 ```
-
-
 
 ### ControlControl族
 
@@ -977,6 +991,22 @@ DockPanel内部的元素会附加DockPanel.Dock属性，该属性类型是一个
 
 ### **Binding的模型**
 
+通常情况下，每个绑定具有四个组件：
+
+- 绑定目标对象。
+- 目标属性。
+- 绑定源。
+- 指向绑定源中要使用的值的路径。
+
+如果将 `TextBox` 的内容绑定到 `Employee.Name` 属性，则可以类似如下所示设置绑定
+
+| 设置         | 值       | 说明                                                         |
+| :----------- | :------- | ------------------------------------------------------------ |
+| 目标         | TextBox  |                                                              |
+| 目标属性     | Text     | 必须是依赖属性                                               |
+| 源对象       | Employee | .NET 对象、XML、UIElement、任何列表对象、ADO.NET、Web 服务对象等 |
+| 源对象值路径 | Name     | 源对象的那一个属性                                           |
+
 ![image-20240423231235062](./README.assets/image-20240423231235062-5614294-6633396.png)
 
 ### Binding的基础概念
@@ -996,7 +1026,7 @@ Windows GUI运行的机制是使用消息来驱使程序运行，消息主要来
 ```c#
 public class Student : INotifyPropertyChanged
 {
-
+		// 事件属性改变处理
     public event PropertyChangedEventHandler PropertyChanged;
 
     private string name;
@@ -2631,6 +2661,208 @@ public partial class MainWindow : Window
 > 使用命令可以自己在写代码判断Button什么时候可用的路逻辑
 >
 > RoutedCommand是一个
+
+## 资源
+
+### 资源的概述
+
+WPF不但支持程序级别的资源，也支持对象级资源，每一个元素都可以持有自己的资源并且可以被其他子级元素共享。各种模版、程序样式和主题都是对象级的资源。
+
+每一个WPF的界面元素都有一个ResourceDictionary类型Resource属性，该属性继承自FrameworkElement类，以键值对的形式存储资源。在ResourceDictionary将资源视为Objectl类型，在使用资源时候需要对类型进行转换，Xaml编译器能够通过标签的Attribute来自动识别资源。在向资源中添加数据需要先将类型引入到xaml的命名空间中。
+
+`````xaml
+<Window x:Class="Source.MainWindow"
+				………
+        xmlns:local="clr-namespace:Source"
+        <!--在资源中引用类型时候必须要引入类型所在的命名空间-->
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <ResourceDictionary>
+       		 <!--字符串资源-->          	
+            <sys:String x:Key="str1">
+                字符串资
+            </sys:String>
+          <!--double类的资源-->
+            <sys:Double x:Key="dou1">
+                12.90
+            </sys:Double>
+        </ResourceDictionary>
+    </Window.Resources>
+     <!--使用静态资源-->        
+		 <TextBlock Text="{StaticResource str1}" Width="100" />
+</Window>
+
+<!--在集合集合对象和扩展标记中可以进行简写-->
+<Window.Resources>
+   <!--字符串资源-->          	
+    <sys:String x:Key="str1">
+        字符串资
+    </sys:String>
+  <!--double类的资源-->
+    <sys:Double x:Key="dou1">
+        12.90
+    </sys:Double>
+</Window.Resources>
+`````
+
+> [!IMPORTANT]
+>
+> 在自己的资源中没有找到会继续向上查找，如果顶级的容器中也没有找到则会到`Application.Resources`中进行查找，直到找到资源，如果向上查找一直没有找到则会抛出异常。
+
+**资源文件的分离**
+
+和前端开发一样将CSS样式文件单独分离出来，放入一个文件中。在ResourceDictionary标签中有一个Source的属性，可以将xmal样式文件已路径的形式引入。
+
+````xaml
+<Window x:Class="Source.MainWindow"
+				……
+        xmlns:local="clr-namespace:Source"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="{StaticResource ResourceKey=dstr}" Height="450" Width="800">
+    <Window.Resources>
+        <ResourceDictionary Source="Dictionary1.xaml">
+            <sys:String x:Key="str1">
+                内部字符串资
+            </sys:String>
+        </ResourceDictionary>
+    </Window.Resources>
+    <TextBlock Text="{StaticResource str1}" Width="100" />
+</Window>
+````
+
+外部的Dictionary.xaml文件
+
+````xaml
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String  x:Key="dstr">
+        这是来自外部的ResourceDictionary中的字符串
+    </sys:String>
+</ResourceDictionary>
+````
+
+在Visual Studio中新建字典资源文件
+
+<img src="./README.assets/image-20240629204316793.png" alt="image-20240629204316793"  style="width:200px"/>
+
+### 资源组
+
+ResourceDictionary 元素不具有 x:Key 指令，通常该指令对于资源集合中的所有项是必需的。 但 MergedDictionaries 集合中的另一个 ResourceDictionary 引用是一个特殊情况，是为此合并资源字典方案预留的。 进一步讲，引入合并资源字典的 ResourceDictionary 不能有 x:Key 指令。
+
+```xaml
+<Page.Resources>
+  <ResourceDictionary>
+    <ResourceDictionary.MergedDictionaries>
+      <ResourceDictionary Source="myresourcedictionary.xaml"/>
+      <ResourceDictionary Source="myresourcedictionary2.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+  </ResourceDictionary>
+</Page.Resources>
+```
+
+### 动态资源和静态资源
+
+StaticResource只会加载一次，后续不在更新，DynamicResource可以在程序运行时动态的更新
+
+```xaml
+<!--点击按钮后Btn2的动态绑定视图会被更新-->
+<Window x:Class="StaticAndDynamicResource.MainWindow"
+        ……
+        Title="动态和静态资源" Height="80" Width="150">
+    <Window.Resources>
+        <TextBlock x:Key="t1" Text="文本块1内容" />
+        <TextBlock x:Key="t2" Text="文本块2内容" />
+    </Window.Resources>
+    <StackPanel>
+        <!--静态-->
+        <Button x:Name="Btn1" Content="{StaticResource t1}" />
+        <!--动态-->
+        <Button x:Name="Btn2" Content="{DynamicResource t2}" />
+        <Button x:Name="changeBtn" Click="Click_Change" Content="更新内容"/>
+    </StackPanel>
+</Window>
+```
+
+更新前后对比
+
+<div style="display: flex; align-items: center; justify-content: center;">
+ <img src="./README.assets/image-20240629211258813.png" alt="image-20240629211258813" style="width:300px;" />
+<img src="./README.assets/image-20240629211321046.png" alt="image-20240629211321046" style="width:300px;" />
+</div>
+
+
+
+### 添加二进制资源
+
+字典资源成为“对象资源”或者“WPF资源”，而把引用程序的内嵌资源称为“”程序集资源“”或者“二进制资源”。在Visual Studio可以添加资源文件Resource.resx,需要将文件的访问修饰符改为public。
+
+<div style="display: flex; align-items: center; justify-content: center;">
+  <img src="./README.assets/image-20240630135431369.png" alt="image-20240630135431369" style="width:50%;" />
+<img src="./README.assets/image-20240629212610472.png" alt="image-20240629212610472" style="width:50%;" />
+</div>
+
+使用二进制资源的步骤
+
+1. 将Properties名称空间映射到Xaml中
+2. 使用`x:Satic`标签扩展来访问资源
+
+```xaml
+<!--引入命名空间--> 
+xmlns:pp ="clr-namespace:WpfApp6.Properties"
+     
+<StackPanel>
+    <TextBox Text="{x:Static pp:Resources.UserName}" />
+    <TextBox Text="{x:Static pp:Resources.PassWord}" />
+</StackPanel>
+```
+
+嵌入图片资源
+
+可以使用URL路径
+
+`pack://application:,,,[/程序集名称;][可选版本号;][文件夹名称/]文件名`
+
+省略的写法：
+
+`[文件夹名称/]文件名`
+
+```xaml
+<StackPanel Orientation="Horizontal">
+    <Image Source="Resources/背景.png" Width="200" Height="200"/>
+    <Image Source="pack://application:,,,/Resources/背景1.png"  Width="200" Height="200"/>
+</StackPanel>
+```
+
+```c#
+// 使用代码范式引入
+Uri imgUri = new Uri(@"Resources/背景.png",UriKind.Absolute); // 绝对路径
+this.mImg.Source = new BitmapImage(imgUri);
+```
+
+<img src="./README.assets/image-20240630143255279.png" alt="image-20240630143255279" style="width:500px" />
+
+## 模版
+
+通常在 XAML 文件的 Resources 部分中将模板声明为资源。
+
+WPF中的模版可以分为两大类：
+
+- ControlTemplate：决定组件的内部的结构
+- DataTemplate：决定一条数据的表现形式
+
+### DataTemplate
+
+常用于3个地方：
+
+1. ContentControl的ContentTemplate属性，
+2. ItemsControl的ItemTemplate属性
+3. GridViewColumn的CellTemplate属性
+
+
 
 
 
